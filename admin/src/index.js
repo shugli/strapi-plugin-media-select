@@ -1,27 +1,27 @@
 import { prefixPluginTranslations } from '@strapi/helper-plugin';
 import pluginId from './pluginId';
-import CountrySelectIcon from './components/CountrySelectIcon';
+import MediaSelectIcon from './components/MediaSelectIcon';
 import getTrad from './utils/getTrad';
 import countries from 'i18n-iso-countries';
 
 export default {
     register(app) {
         app.customFields.register({
-            name: 'country',
-            pluginId: 'country-select',
+            name: 'media',
+            pluginId: 'media-select',
             type: 'string',
-            icon: CountrySelectIcon,
+            icon: MediaSelectIcon,
             intlLabel: {
-                id: getTrad('country-select.label'),
-                defaultMessage: 'Country',
+                id: getTrad('media-select.label'),
+                defaultMessage: 'Media',
             },
             intlDescription: {
-                id: getTrad('country-select.description'),
-                defaultMessage: 'Select any country',
+                id: getTrad('media-select.description'),
+                defaultMessage: 'Select any media',
             },
             components: {
                 Input: async () =>
-                    import('./components/CountrySelect'),
+                    import('./components/MediaSelect'),
             },
             options: {
                 advanced: [

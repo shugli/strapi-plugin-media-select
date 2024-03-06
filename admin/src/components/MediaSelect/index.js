@@ -6,7 +6,7 @@ import { Field, FieldLabel, FieldError, FieldHint } from '@strapi/design-system/
 import { useIntl } from 'react-intl';
 import getTrad from '../../utils/getTrad';
 
-const CountrySelect = React.forwardRef(({
+const MediaSelect = React.forwardRef(({
     value,
     onChange,
     name,
@@ -27,7 +27,7 @@ const CountrySelect = React.forwardRef(({
         <Field
             name={name}
             id={name}
-            error={!isValidValue ? formatMessage({ id: getTrad('country-select.unsupported-country-code') }, { countryCode: value }) : error}
+            error={!isValidValue ? formatMessage({ id: getTrad('media-select.unsupported-media-code') }, { mediaCode: value }) : error}
             required={required}
             hint={description && formatMessage(description)}
         >
@@ -43,11 +43,11 @@ const CountrySelect = React.forwardRef(({
                     aria-disabled={disabled}
                     disabled={disabled}
                     value={isValidValue ? value : null}
-                    onChange={countryCode => onChange({ target: { name: name, value: countryCode, type: attribute.type }})}
+                    onChange={mediaCode => onChange({ target: { name: name, value: mediaCode, type: attribute.type }})}
                     onClear={() => onChange({ target: { name: name, value: '', type: attribute.type }})}
                 >
-                    {Object.entries(parsedOptions).sort(([c1, n1], [c2, n2]) => n1.localeCompare(n2)).map(([countryCode, countryName]) => (
-                        <ComboboxOption value={countryCode} key={countryCode}>{countryName}</ComboboxOption>
+                    {Object.entries(parsedOptions).sort(([c1, n1], [c2, n2]) => n1.localeCompare(n2)).map(([mediaCode, mediaName]) => (
+                        <ComboboxOption value={mediaCode} key={mediaCode}>{mediaName}</ComboboxOption>
                     ))}
                 </Combobox>
 
@@ -58,7 +58,7 @@ const CountrySelect = React.forwardRef(({
     )
 })
 
-CountrySelect.defaultProps = {
+MediaSelect.defaultProps = {
     description: null,
     disabled: false,
     error: null,
@@ -67,7 +67,7 @@ CountrySelect.defaultProps = {
     value: '',
 };
 
-CountrySelect.propTypes = {
+MediaSelect.propTypes = {
     intlLabel: PropTypes.object.isRequired,
     onChange: PropTypes.func.isRequired,
     attribute: PropTypes.object.isRequired,
@@ -80,4 +80,4 @@ CountrySelect.propTypes = {
     value: PropTypes.string,
 };
 
-export default CountrySelect;
+export default MediaSelect;

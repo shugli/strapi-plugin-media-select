@@ -1,26 +1,26 @@
 {
-    "name": "strapi-plugin-country-select",
-    "description": "A strapi custom field for selecting any country based on the ISO 3166-1 country code standard.",
+    "name": "strapi-plugin-media-select",
+    "description": "A strapi custom field for selecting any MediaHub media.",
     "keywords": [
         "strapi",
         "strapi-plugin",
         "custom-fields",
-        "country"
+        "mediahub",
+        "media"
     ],
     "version": "1.0.3",
     "strapi": {
-        "name": "country-select",
-        "description": "Country Select custom field",
+        "name": "media-select",
+        "description": "Media Select custom field",
         "kind": "plugin",
-        "displayName": "Country Select"
+        "displayName": "Media Select"
     },
     "dependencies": {
         "i18n-iso-countries": "^7.5.0"
     },
     "author": {
-        "name": "Chris Ebert",
-        "email": "chris.ebert.dev@gmail.com",
-        "url": "https://chris.ebert.dev"
+        "name": "Samuel Hügli",
+        "email": "samuel.hugli@gmail.com"
     },
     "license": "MIT",
     "peerDependencies": {
@@ -28,6 +28,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/ChrisEbert/strapi-plugin-country-select.git"
+        "url": "https://github.com/shugli/strapi-plugin-media-select.git"
     }
 }

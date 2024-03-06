@@ -1,6 +1,6 @@
-# Strapi plugin country-select
+# Strapi plugin media-select
 
-A strapi custom field for selecting any country based on the ISO 3166-1 country code standard.
+A strapi custom field for selecting any MediaHub media.
 
 ## Installation
 
@@ -8,10 +8,10 @@ To install this plugin, you need to add an NPM dependency to your Strapi applica
 
 ```
 # Using Yarn
-yarn add strapi-plugin-country-select
+yarn add strapi-plugin-media-select
 
 # Or using NPM
-npm install strapi-plugin-country-select
+npm install strapi-plugin-media-select
 ```
 
 Then, you'll need to build your admin panel:
@@ -27,15 +27,4 @@ npm run build
 
 ## Usage
 
-After installation you will find the country-select at the custom fields section of the content-type builder.
-
-![country select screenshot](./country-select-custom-field.png)
-
-Now you can select any country from the list. The Alpha-2 code of the selected country is stored in the database.
-
-![country select screenshot](./country-select.png)
-
-
-## Related
-
-- [i18n-iso-countries](https://github.com/michaelwittig/node-i18n-iso-countries) - i18n for ISO 3166-1 country codes
+After installation you will find the media-select at the custom fields section of the content-type builder.

@@ -1,5 +1,0 @@
-{
-    "country-select.label": "Pays",
-    "country-select.description": "Sélectionnez un pays",
-    "country-select.unsupported-country-code": "Code de pays non supporté : \"{countryCode}\""
-}
